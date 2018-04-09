@@ -4,9 +4,22 @@
 // This function should work in both ascending or descending order.
 
 // Complete this function.
-function range() {
+function range(startNber, stopNber) {
+  const array = [];
+  if (startNber < stopNber) {
+    for (let i = startNber; i <= stopNber; i++){
+      array.push(i);
+      }
+  } else {
+    for (let i = startNber; i >= stopNber; i--){
+      array.push(i);
+    }
+  }
 
-}
+  return array;
+  }
+
+console.log(range(10, 20));
 
 // Do not remove last lines, it is for tests
 // eslint-disable-next-line

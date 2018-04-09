@@ -2,6 +2,9 @@
 // WARNING: You're not allowed to use `Array.map`!
 
 // Your code here...
+function double(array) {
+
+}
 
 // Do not remove last lines, it is for tests
 // eslint-disable-next-line

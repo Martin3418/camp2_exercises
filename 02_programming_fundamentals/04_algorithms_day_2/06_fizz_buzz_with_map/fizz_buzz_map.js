@@ -9,9 +9,24 @@
    YOU MUST USE array.map
 */
 
-function fizzBuzz(list) {
-
+function fizzify(number) {
+  let result;
+  if (number % 15 === 0) {
+    result = "FizzBuzz";
+  } else if (number % 3 === 0) {
+    result = "Fizz";
+  } else if (number % 5 === 0) {
+    result = "Buzz";
+  } else {
+    result = number;
+  }
+  return result;
 }
 
+let list = [1,3,5,6,7,15]
+
+function fizzBuzz (list) {
+  return list.map(fizzify);
+}
 
 module.exports = fizzBuzz;
