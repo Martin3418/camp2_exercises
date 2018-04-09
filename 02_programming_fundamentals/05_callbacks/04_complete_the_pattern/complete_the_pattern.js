@@ -34,9 +34,16 @@
 // ```
 
 function pattern(size) {
-  // Your code here
+  let result = "";
+  for (let i = 1; i <= size; i++) {
+    const number = i.toString();
+    result += number.repeat(i);
+    result += "\n";
+    //result += ;
+  }
+  return result.trim();
 }
-
+console.log(pattern(3));
 // Do not remove last lines, it is for tests
 // eslint-disable-next-line
 module.exports = pattern;

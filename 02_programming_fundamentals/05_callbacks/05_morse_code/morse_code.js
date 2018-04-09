@@ -44,10 +44,31 @@ const MORSE_CODE = {
   "----.": "9"
 };
 
-function decodeMorse(morse) {
-  // Your code here
-}
+let morse = ".... . -.--   .--- ..- -.. .";
+let splitWord = morse.split("  ");
+let wordOne = splitWord[0];
+let splitLetters = wordOne.split(" ");
+
+function findWord(morseBlockW){
+  console.log(MORSE_CODE[morseBlockW]);
+};
+let twoWords = splitWord.forEach(findWord);
+
+// function findLetters(morseBlockL){
+//   console.log(MORSE_CODE[morseBlockL]);
+// };
+// let splitWord.forEach(findLetters);
+//
+// let splitLetters = morse.split(" ").forEach(splitWord);
+
+
+
+// function decodeMorse(morse) {
+//
+//   };
+//
+// decodeMorse(".... . -.--   .--- ..- -.. .");
 
 // Do not remove last lines, it is for tests
 // eslint-disable-next-line
-module.exports = decodeMorse;
+//module.exports = decodeMorse;
