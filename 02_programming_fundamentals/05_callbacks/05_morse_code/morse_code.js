@@ -46,13 +46,13 @@ const MORSE_CODE = {
 
 let morse = ".... . -.--   .--- ..- -.. .";
 let splitWord = morse.split("  ");
-let wordOne = splitWord[0];
-let splitLetters = wordOne.split(" ");
+//let wordOne = splitWord[0];
+//let splitLetters = wordOne.split(" ");
 
-function findWord(morseBlockW){
-  console.log(MORSE_CODE[morseBlockW]);
+function findWord(element){
+  console.log(MORSE_CODE[element]);
 };
-let twoWords = splitWord.forEach(findWord);
+let message = splitWord.forEach(findWord);
 
 // function findLetters(morseBlockL){
 //   console.log(MORSE_CODE[morseBlockL]);
