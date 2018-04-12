@@ -23,6 +23,6 @@ function fizzBuzz(list) {
   }
   return fbArray;
 }
-console.log(fizzBuzz([1, 15]));
+console.log(fizzBuzz([1,2,3,4,5,6,15]));
 
 module.exports = fizzBuzz;

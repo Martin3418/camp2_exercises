@@ -4,12 +4,35 @@
 // This function should work in both ascending or descending order.
 
 // Complete this function.
+
+// exercice fait le 12 avril
+
+function doThisAndThat(startNumber, endNumber) {
+  const newArray = [];
+  if (startNumber < endNumber) {
+    for (let i = startNumber; i <= endNumber; i++)
+      newArray.push(i);
+
+  } else {
+    for (let i = startNumber; i >= endNumber; i--)
+      newArray.push(i);
+
+  }
+  return newArray;
+}
+console.log(doThisAndThat(5,12));
+
+
+
+
+//correction initiale
+
 function range(startNber, stopNber) {
   const array = [];
   if (startNber < stopNber) {
     for (let i = startNber; i <= stopNber; i++){
       array.push(i);
-      }
+    }
   } else {
     for (let i = startNber; i >= stopNber; i--){
       array.push(i);
