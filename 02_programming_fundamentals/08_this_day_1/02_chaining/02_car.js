@@ -1,11 +1,9 @@
 // See Sparta courses for the exercise summary
 const car = {
   carSpeed: 0,
-  carMinutes: 0,
   drivingDistance: 0,
   start: function () {
     this.carSpeed = 0;
-    this.carMinutes = 0;
     this.drivingDistance = 0;
     return this;
   },
@@ -23,5 +21,5 @@ const car = {
     return this;
   }
 };
-car.start().changeSpeed(130).drive(42).showDistance();
+car.start().changeSpeed(120).drive(60).changeSpeed(60).drive(30).showDistance();
 module.exports = car;
