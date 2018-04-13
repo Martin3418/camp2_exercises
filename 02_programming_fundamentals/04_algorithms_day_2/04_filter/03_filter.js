@@ -1,15 +1,20 @@
 // filter takes an array of integer and a function of filtering by using an higher order function
 // such as filter([1, 2, 3, 4, 5], pickEvenNumbers) returns [2, 4]
-function filter(array, fn) {
-  // Your code here
+const newFilteredArray = [];
+
+function pickEvenNumbers(arrayEntered) {
+  for (let i = 0; i < arrayEntered.length; i++)
+    if (arrayEntered[i] % 2 === 1) {
+      newFilteredArray.push(arrayEntered[i]);
+    }
 }
 
-function filter(x) {
-  return x % 2 === 0;
-}
+filter
+const filteredArray = array.filter(fn => array % 2 === 0);
 
-const newArray = [0, 1, 2, 3, 4, 5].filter(filter);
-console.log(newArray);
+
+
+console.log(filter([1,2,3,4,5], pickEvenNumbers));
 
 // do not remove this line, it is for tests
 module.exports = filter;
