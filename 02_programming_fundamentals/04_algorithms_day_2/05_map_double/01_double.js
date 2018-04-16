@@ -2,21 +2,25 @@
 // WARNING: You're not allowed to use `Array.map`!
 
 // Your code here...
+const newArray = [];
 function double(array) {
-
+  for (let i = 0; i < array.length; i++) {
+    newArray.push(array[i] * 2);
+  } return newArray;
 }
+console.log(double([1, 2, 3, 4, 5]));
 
 // Do not remove last lines, it is for tests
 // eslint-disable-next-line
 module.exports = double;
 
-function factorialAndThenDo(number, toto) {
-  let result = 1;
-  for (let i = 2; i <= number; i++) {
-    result = result * i;
-  }
-  toto(result);
-}
-factorialAndThenDo(5, function(result) {
-  console.log("The result of your operation is ", result);
-});
+// function factorialAndThenDo(number, toto) {
+//   let result = 1;
+//   for (let i = 2; i <= number; i++) {
+//     result = result * i;
+//   }
+//   toto(result);
+// }
+// factorialAndThenDo(5, function(result) {
+//   console.log("The result of your operation is ", result);
+// });
