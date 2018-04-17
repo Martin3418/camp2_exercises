@@ -111,10 +111,10 @@ function publishComment(postId, name, email, body, callback) {
     {
       url: `http://jsonplaceholder.typicode.com/posts/${postId}/comments`,
       method: "POST",
-      form: {postId: postId, name: name, email: email, body: body},
+      form: {"postId": postId, "name": name, "email": email, "body": body},
     },
-    function (error, response, body) {
-      callback(body);
+    function (error, response, result) {
+      callback(result);
     }
   );
 }
@@ -123,11 +123,37 @@ function updatePostTitle(postId, newTitle, callback) {
   request(
     {
       url: `http://jsonplaceholder.typicode.com/posts/${postId}`,
-      method: "PUT",
-      form: {postId: postId, newTitle: newTitle},
+      method: "PATCH",
+      form: {"title": newTitle},
     },
-    function (error, response, newTitle) {
-      callback(newTitle);
+    function (error, response, result) {
+      callback(result);
+    }
+  );
+}
+
+function updatePostBody(postId, newBody, callback) {
+  request(
+    {
+      url: `http://jsonplaceholder.typicode.com/posts/${postId}`,
+      method: "PATCH",
+      form: {"body": newBody},
+    },
+    function (error, response, result) {
+      callback(result);
+    }
+  );
+}
+
+function updatePost(postId, newTitle, newBody, callback) {
+  request(
+    {
+      url: `http://jsonplaceholder.typicode.com/posts/${postId}`,
+      method: "PATCH",
+      form: {"title": newTitle, "body": newBody},
+    },
+    function (error, response, result) {
+      callback(result);
     }
   );
 }
@@ -143,4 +169,6 @@ module.exports = {
   publishPost: publishPost,
   publishComment: publishComment,
   updatePostTitle: updatePostTitle,
+  updatePostBody: updatePostBody,
+  updatePost: updatePost,
 };
