@@ -9,6 +9,10 @@
    YOU MUST USE array.map
 */
 
+function fizzBuzz (list) {
+  return list.map(fizzify);
+}
+
 function fizzify(number) {
   let result;
   if (number % 15 === 0) {
@@ -23,10 +27,8 @@ function fizzify(number) {
   return result;
 }
 
-let list = [1,3,5,6,7,15]
+console.log(fizzBuzz([1, 3, 5, 6, 7, 15]));
 
-function fizzBuzz (list) {
-  return list.map(fizzify);
-}
+
 
 module.exports = fizzBuzz;

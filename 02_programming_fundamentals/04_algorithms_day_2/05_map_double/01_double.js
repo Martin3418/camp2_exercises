@@ -2,8 +2,8 @@
 // WARNING: You're not allowed to use `Array.map`!
 
 // Your code here...
-const newArray = [];
 function double(array) {
+  const newArray = [];
   for (let i = 0; i < array.length; i++) {
     newArray.push(array[i] * 2);
   } return newArray;
