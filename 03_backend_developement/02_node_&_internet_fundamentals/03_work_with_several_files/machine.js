@@ -5,7 +5,6 @@ const container = require("./container");
 const machine = {
   fillWithLitersOfCoffee: function(volume) {
     container.putLitersOfCoffee(volume);
-    return container.litersOfCoffee;
   },
   expresso: function() {
     const volumeExpresso = 0.08;
