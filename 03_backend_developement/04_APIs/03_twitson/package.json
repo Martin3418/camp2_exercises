@@ -1,7 +1,6 @@
 {
   "name": "01_twitson",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -10,5 +9,10 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^21.2.1"
+  },
+  "description": "",
+  "dependencies": {
+    "oauth": "^0.9.15",
+    "request": "^2.85.0"
   }
 }

@@ -1,0 +1,18 @@
+
+SELECT *
+FROM race
+WHERE race_name = 'New York City Marathon - Women'
+
+SELECT *
+FROM race
+ORDER BY runner_position asc
+LIMIT 3
+
+SELECT *
+FROM race
+WHERE runner_racingtime < '02:30:00' AND runner_bib > 100
+
+SELECT *
+FROM race
+WHERE (runner_racingtime < '02:15:00' AND runner_bib > 100) OR (runner_racingtime < '02:30:00' AND runner_bib < 100)
+ORDER BY runner_bib ASC

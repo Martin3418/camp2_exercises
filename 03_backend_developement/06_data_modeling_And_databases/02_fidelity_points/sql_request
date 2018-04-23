@@ -1,0 +1,22 @@
+SELECT client_name, purchase_date
+FROM purchases
+ORDER BY purchase_date ASC
+LIMIT 3;
+
+SELECT client_name, purchase_date
+FROM purchases
+WHERE client_name NOT IN (select client_name FROM purchases WHERE purchase_date > (date '2017-12-31' - interval '2 month'));
+
+SELECT client_name, purchase_date
+FROM purchases
+WHERE client_name NOT IN (select client_name FROM purchases WHERE purchase_date > (date '2017-12-31' - interval '1 month'))
+AND number_of_items > 3;
+
+SELECT client_name, purchase_date, euros_spent
+FROM purchases
+ORDER BY euros_spent DESC
+LIMIT 1;
+
+SELECT SUM(euros_spent)
+FROM purchases
+WHERE purchase_date > '2017-07-01' AND purchase_date < '2017-08-31';
