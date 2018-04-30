@@ -19,7 +19,7 @@
           <h1>List of french departments</h1>
 
           <ul id="department-list" class="list-group">
-            <!-- Your list will end up here -->
+
           </ul>
 
         </div>
@@ -27,8 +27,10 @@
     </div>
     <script src="./departments.js"></script>
     <script>
-      // Your code here
-      // the departments are accessible in a global variable named DEPARTMENTS
+    const listOfDepartments = document.querySelector("#department-list.list-group");
+    for (let i = 0; i < DEPARTMENTS.length; i++) {
+      listOfDepartments.innerHTML += `<li>${DEPARTMENTS[i]}</li>`;
+    }
     </script>
   </body>
 </html>

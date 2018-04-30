@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8" />
+    <title>Welcome Page with CSS</title>
+    <style>
+    body {
+      margin: 40px;
+    }
+    .container {
+      max-width: 1fr;
+      margin: 0 20px;
+      display: grid;
+      grid-gap: 10px;
+    }
+
+    /* .container {
+      display: flex;
+      flex-wrap: wrap;
+    } */
+
+    .container {
+      display: grid;
+      margin: 0 auto;
+      /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+      grid-auto-rows: minmax(150px, auto);
+    }
+    .box {
+      padding: 20px;
+      border-radius: 5px;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-auto-rows: minmax(150px, auto);
+    }
+    .box:nth-child(even) {
+      background-color: #ccc;
+      color: #000;
+    }
+    .box:nth-child(odd) {
+    background-color: #555;
+    color: #fff;
+    }
+
+    .important {
+      font-weight: bold;
+    }
+
+    .emphasis {
+      font-style: italic;
+    }
+    .important.emphasis {
+      color: red;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>My Grid</h1>
+    <div class="container">
+      <div class="box">One</div>
+      <div class="box">Two</div>
+      <div class="box">Three</div>
+      <div class="box">Four</div>
+      <div class="box">Five</div>
+      <div class="box">Six</div>
+      <div class="box">Seven</div>
+      <div class="box">Eight</div>
+    </div>
+    <p>
+      <span class="important">Lorem ipsum dolor</span> sit amet, <span class="emphasis important">consectetur adipiscing elit.</span> Ut accumsan aliquam vestibulum. Maecenas lectus ex, luctus quis sapien in, finibus lacinia urna. Nam ac dui quis nibh maximus facilisis in nec massa. Quisque orci odio, hendrerit ac fermentum et, ultricies vel enim. Cras dapibus risus ut risus imperdiet pellentesque. Nulla id ante ligula. Sed tristique diam elit. Nullam ullamcorper consequat magna imperdiet eleifend. Donec vel lorem faucibus, efficitur ex eget, sodales sem. Pellentesque sagittis <span class="emphasis">sollicitudin nisl vel suscipit. Suspendisse consequat est eget erat sollicitudin volutpat. Nam bibendum sapien vel aliquet consequat. Phasellus dictum ac risus ut volutpat. Morbi leo turpis, porttitor quis elit non, tincidunt pretium risus. In viverra arcu a magna bibendum varius.</span>
+
+      Curabitur risus nibh, mattis placerat rhoncus eu, viverra nec orci. Integer molestie ipsum posuere, bibendum dui non, mattis nisl. Nam vel tellus lacus. Fusce neque urna, tristique id massa id, interdum laoreet velit. Integer ac ex sed mi maximus pulvinar in eget magna. Etiam maximus metus ut metus auctor, sit amet lacinia ipsum facilisis. Vivamus malesuada elit at nunc bibendum cursus. Donec turpis sem, varius quis mauris quis, vulputate egestas sapien.
+    </p>
+  </body>
+</html>
