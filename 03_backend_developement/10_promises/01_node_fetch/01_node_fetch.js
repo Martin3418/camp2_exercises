@@ -16,3 +16,14 @@ fetch(
   .then((result) => {
     console.log(`The brand name is ${result.title}`);
   });
+
+
+// fetch(
+//   "https://decath-product-api.herokuapp.com/products/efe288cb-fb63-4b23-b8df-529f04b8b02b")
+//   .then((response) => response.json())
+//   .then((result) => fetch(
+//     `https://decath-product-api.herokuapp.com/brands/${result.brand_id}`))
+//   .then((response) => response.json())
+//   .then((result) => {
+//     console.log(`The brand name is ${result.title}`);
+//   });
