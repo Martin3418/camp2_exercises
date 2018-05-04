@@ -40,7 +40,7 @@ function fetchProducts(category_id) {
 
 function loadData(element, categoryId) {
   pool.query(
-    "INSERT INTO products_categories (category_id, product_id) VALUES ($1, $2)",
+    "INSERT INTO category_products (category_id, product_id) VALUES ($1, $2)",
     [categoryId, element.id],
     function(error, result) {
       if (error) {

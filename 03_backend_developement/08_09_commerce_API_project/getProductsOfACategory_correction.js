@@ -27,7 +27,7 @@ request(
             counter = 0;
             productCategoryList.forEach(function(productCategory) {
               client.query(
-                "INSERT INTO products_categories (category_id, product_id) VALUES ($1::uuid, $2::uuid)",
+                "INSERT INTO category_products (category_id, product_id) VALUES ($1::uuid, $2::uuid)",
                 [productCategory.categoryId, productCategory.productId],
                 function(error, result) {
                   if (error) {
