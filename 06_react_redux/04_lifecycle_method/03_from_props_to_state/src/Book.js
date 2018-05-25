@@ -33,7 +33,7 @@ class Book extends Component {
   }
   componentDidUpdate(prevProps, prevState) {
     if (prevProps !== this.props) {
-      fetch(`https://openlibrary.org/api/books?bibkeys=ISBN:${this.props.isbn}8&format=json&jscmd=data`)
+      fetch(`https://openlibrary.org/api/books?bibkeys=ISBN:${this.props.isbnToSearch}8&format=json&jscmd=data`)
         .then(response => response.json())
         .then(bookData => {
           this.setState({book: Object.values(bookData)[0]})

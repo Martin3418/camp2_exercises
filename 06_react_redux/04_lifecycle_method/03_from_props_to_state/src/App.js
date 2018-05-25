@@ -7,13 +7,14 @@ class App extends Component {
     super(props);
     this.state = {
       isbn: "978059651774",
+      isbnToSearch: "",
     }
   }
   handleChange = (event) => {
     this.setState({isbn: event.target.value});
   }
   handleSearch = () => {
-
+    this.setState({isbnToSearch: this.state.isbn});
   }
   render() {
     return (
