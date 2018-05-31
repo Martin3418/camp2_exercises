@@ -2,14 +2,15 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Route, Link } from 'react-router-dom';
+import Home from "./Home";
 
-const Home = () => (
-  <div>
-    <h2>
-      Home
-    </h2>
-  </div>
-)
+// const Home = () => (
+//   <div>
+//     <h2>
+//       Home
+//     </h2>
+//   </div>
+// )
 
 const About = () => (
   <div>

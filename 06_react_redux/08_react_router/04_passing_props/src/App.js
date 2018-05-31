@@ -56,7 +56,7 @@ function Menu() {
     <Route exact path="/" component={Home}/>
     <Route path="/about" component={About}/>
     <Route path="/articles" component={Articles}/>
-    <Route path="/articles/:articleId" render={(routeProps) => <Article {...routeProps} author="Martin"/>} />
+    <Route path="/articles/:articleId" render={(routerProps) => <Article {...routerProps} author="Martin"/>} />
   </div>
   )
 }
