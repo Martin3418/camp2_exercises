@@ -51,6 +51,26 @@ function reducer(state = initialState, action) {
         taskList: reducedTaskList
       }
 
+        case "SHOW_ALL":
+          const fullList = state.taskList.filter(element => element.checked === false || element.checked === false)
+            return {
+            ...state,
+            taskList: fullList
+          }
+
+        case "SHOW_NOT_COMPLETED":
+          const notCompletedList = state.taskList.filter(element => element.checked === false)
+            return {
+            ...state,
+            taskList: notCompletedList
+          }
+
+        case "SHOW_COMPLETED":
+          const completedList = state.taskList.filter(element => element.checked === true)
+            return {
+            ...state,
+            taskList: completedList
+          }
 
     default:
       return state

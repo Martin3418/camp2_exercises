@@ -29,3 +29,21 @@ export function deleteTask(id) {
     id: id
   }
 }
+
+export function showNotCompleted() {
+  return {
+    type: "SHOW_NOT_COMPLETED"
+  }
+}
+
+export function showCompleted() {
+  return {
+    type: "SHOW_COMPLETED"
+  }
+}
+
+export function showAll() {
+  return {
+    type: "SHOW_ALL"
+  }
+}

@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import './App.css';
 import TaskInput from "./modules/TaskInput";
 import TaskList from "./modules/TaskList";
+import SortOptions from "./modules/SortOptions";
 
 class App extends Component {
   render() {
@@ -12,6 +13,9 @@ class App extends Component {
       <div className="container pt-3">
         <div className="row justify-content-center">
             <TaskInput />
+        </div>
+        <div className="row justify-content-center">
+            <SortOptions />
         </div>
         <div className="container pt-3">
           <table className="table table-hover">
