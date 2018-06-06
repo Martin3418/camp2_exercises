@@ -5,9 +5,9 @@ export default class ImageToDisplay extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      portrait: true,
       urlSource: "./maxresdefault.png",
     };
+  }
 
   setImage() {
     const url1 = './maxresdefault.png';
@@ -23,11 +23,7 @@ export default class ImageToDisplay extends Component {
   render() {
     return (
 
-      <Image
-        style={{width: 200, height: 260, borderTopLeftRadius: 25, borderTopRightRadius: 30, borderBottomLeftRadius: 30, borderBottomRightRadius: 30}}
-        source={require(this.state.urlSource)}
-        onOrientationChange={this.setImage()}
-      />
+
     )
   }
 }
